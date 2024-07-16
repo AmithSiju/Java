@@ -1,9 +1,15 @@
 import java.util.Scanner;
 public class Product{
-    private double price;
+    double price;
+    String pname,pcode;
     Scanner sc = new Scanner(System.in);
     
     public void readData(){
+        
+        System.out.println("Enter the product name : ");
+        pname = sc.nextLine();
+        System.out.println("Enter the product code : ");
+        pcode = sc.nextLine();
         System.out.println("Enter the product prize : ");
         price = sc.nextDouble();
     }
@@ -28,6 +34,6 @@ public class Product{
 
         Product leastProduct = Product.comparePrices(product1,Product.comparePrices(product2,product3));
 
-        System.out.println("Least Product : " + leastProduct.getPrice());
+        System.out.println("Least priced amoung given Product : " + leastProduct.getPrice());
     }
 }
